@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cadastro.css') }}">
+</head>
+<body>
+    
+    <div class="cadastro-container">
+    <form action="/cadastro" method="POST">
+        <h2>Cadastro</h2>
+        <label for="username">Nome de Usuario</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm_password">Confirmar Senha</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        {% for mensagem in get_flashed_messages(with_categories=true) %}
+    <p class="{{ mensagem[0] }}">{{ mensagem[1] }}</p>
+        {% endfor %}
+
+        <button type="submit">Cadastrar</button>
+    </form>
+    </div>
+</body>
+</html>

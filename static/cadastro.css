@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif; /* Fonte Inter é mais moderna que Roboto para UI */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7f6; /* Um cinza levemente azulado/esverdeado é mais calmo que o #f0f0f0 */
+    font: 1em sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 14px;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    transition: color 0.3s ease;
+    
+}
+
+a:hover {
+    color: #0056b3;
+    
+}
+
+.cadastro-container {
+    background-color: #fff;
+    padding: 40px; /* Mais espaço interno */
+    border-radius: 16px; /* Bordas mais arredondadas trazem modernidade */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra mais espalhada e clara */
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.cadastro-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 600;
+}
+
+.cadastro-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cadastro-container input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.cadastro-container input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.cadastro-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cadastro-container button:hover {
+    background-color: #0056b3;
+}
+
+.erro  {
+    color: #d9534f; /* Vermelho para mensagens de erro */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.sucesso {
+    color: #28a745; /* Verde para mensagens de sucesso */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
