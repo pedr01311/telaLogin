@@ -10,11 +10,12 @@ app.secret_key = os.getenv('SECRET_KEY')
 
 try:
     db = pymysql.connect(
-        host='localhost',
-        user='root',
+        host=os.getenv('DB_HOST'),
+        user=os.getenv('DB_USER'),
         password=os.getenv('DB_PASSWORD'),
-        database='tela_login'
-    )
+        database=os.getenv('DB_NAME'),
+        port=int(os.getenv('DB_PORT'))
+)
     print("MySQL conectado!")
 except Exception as e:
     print(f"Erro ao conectar: {e}")
